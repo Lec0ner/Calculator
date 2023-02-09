@@ -12,17 +12,32 @@ html{
 }
 /* Внешний вид фона */
 body{
+	margin: 0;
 	align-items: center;
-	background: linear-gradient(60deg,#9813cc,#b44bdd,#44daff,#008cff59);
+	background: linear-gradient(45deg,#2980b9,#6dd5fa,#FFFFFF);
 	display: flex;
 	font-family: 'Dosis', sans-serif;
 	font-display: swap;
 	height: inherit;
 	justify-content: center;
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+	50% {
+    background-position: 100% 50%;
+  }
+	100% {
+    background-position: 0 50%;
+  }
 }
 /* Внешний вид задника калькулятора */
 .wrapper{
-	border-radius: 15px;
+	border-radius: 1px;
 	backdrop-filter: blur(5.5px);
 	-webkit-backdrop-filter: blur(5.5px);
 	box-shadow: 0 4px 30px rgba(35,35,35,0.1);
@@ -62,7 +77,7 @@ body{
 	-webkit-backdrop-filter: blur(5.5px);
 	background: rgba(255,255,255,0.75);
 	border: 1px solid rgba(255,255,255,0.01);
-	border-radius: 16px;
+	border-radius: 100px;
 	box-shadow: 0 4px 30px rgba(35,35,35,0.1);
 	flex-basis: 20%;
 	font-family: inherit;
@@ -75,10 +90,10 @@ body{
 	-webkit-backdrop-filter: blur(5.5px);
 	background: rgba(255,255,255,0.75);
 	border: 1px solid rgba(255,255,255,0.01);
-	border-radius: 16px;
+	border-radius: 100px;
 	box-shadow: 0 4px 30px rgba(35,35,35,0.1);
 	color: #fff;
-	background: #d23eff;
+	background: #5db6da;
 }
 /* Цвет при наведении на боковой столбец кнопки */
 .calc-button:last-child:hover{
@@ -91,7 +106,7 @@ body{
 }
 /* Цвет при нажатии кнопки */
 .calc-button:active{
-	background-color: #0099ff;
+	background-color: #97d5ff;
 }
 /* Ширина двойной кнопки(кнопки стереть) */
 .double{
